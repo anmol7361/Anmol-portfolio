@@ -242,13 +242,22 @@ export default function Home() {
   );
 }
 
-function SkillCard({ title, items }) {
+function SkillCard({
+  title,
+  items,
+}: {
+  title: string;
+  items: string[];
+}) {
   return (
     <div className="bg-black/80 rounded-2xl p-6 border border-white/10">
       <h3 className="text-purple-400 font-semibold mb-4">{title}</h3>
       <div className="flex flex-wrap gap-3">
         {items.map((item) => (
-          <span key={item} className="px-4 py-2 rounded-full bg-slate-800 text-sm">
+          <span
+            key={item}
+            className="px-4 py-2 rounded-full bg-slate-800 text-sm"
+          >
             {item}
           </span>
         ))}
@@ -257,7 +266,15 @@ function SkillCard({ title, items }) {
   );
 }
 
-function ProjectCard({ title, desc, link }) {
+function ProjectCard({
+  title,
+  desc,
+  link,
+}: {
+  title: string;
+  desc: string;
+  link: string;
+}) {
   return (
     <div className="bg-gradient-to-b from-slate-900 to-slate-800 rounded-2xl p-6 border border-white/10 hover:border-purple-500 transition">
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
